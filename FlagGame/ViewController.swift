@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         btnFlag2.layer.borderColor = UIColor.lightGray.cgColor
         btnFlag3.layer.borderWidth = 1
         btnFlag3.layer.borderColor = UIColor.lightGray.cgColor
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(shareTapped))
         
         generateQuestion(action: nil)
     }
@@ -81,5 +81,12 @@ class ViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: handler))
         present (ac, animated: true)
     }
+    @objc func shareTapped() {
+        
+        let ac = UIAlertController(title: "SCORE", message: "\(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present (ac, animated: true)
+    }
+    
 }
 
