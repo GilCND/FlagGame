@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnFlag1: UIButton!
     @IBOutlet weak var btnFlag2: UIButton!
     @IBOutlet weak var btnFlag3: UIButton!
+    @IBOutlet weak var tsgdysd: UIButton!
     
     var countries = [String]()
     var score = 0
